@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#071426">
+  <meta name="description" content="Интерактивная викторина о собственности и социально-экономическом строе.">
+  <title>Собственность и социально-экономический строй — викторина</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="page">
+    <div class="topline" aria-label="Учебная викторина">
+      <span class="topline-mark" aria-hidden="true">✦</span>
+      Экономика · интерактивная викторина
+    </div>
+
+    <section class="quiz-card" aria-labelledby="page-title">
+      <header class="heading">
+        <p class="eyebrow">Проверь себя</p>
+        <h1 id="page-title" tabindex="-1">Проверь свои знания!</h1>
+        <p class="subtitle">Собственность и социально-экономический строй — 20 вопросов, чтобы закрепить главное.</p>
+      </header>
+
+      <div id="quiz" aria-live="polite">
+        <div class="progress-section">
+          <div class="progress-meta">
+            <span id="progress-label">Вопрос <strong>1</strong> из 20</span>
+            <span id="progress-percent">5%</span>
+          </div>
+          <div class="progress-track" id="progress-track" role="progressbar"
+               aria-label="Прогресс викторины" aria-valuemin="0"
+               aria-valuemax="20" aria-valuenow="1">
+            <div class="progress-fill" id="progress-fill"></div>
+          </div>
+        </div>
+
+        <div class="question-top">
+          <p class="question-label">Выбери один ответ</p>
+          <div class="score-chip">Баллы: <strong id="score">0</strong></div>
+        </div>
+        <h2 id="question" tabindex="-1"></h2>
+        <div class="answers" id="answers"></div>
+        <p class="feedback" id="feedback" aria-live="assertive"></p>
+        <div class="actions">
+          <button class="primary-button" id="next-button" type="button" hidden>
+            Следующий вопрос <span aria-hidden="true">→</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="result" id="result" hidden aria-live="polite"></div>
+    </section>
+    <p class="footer-note">Выбери ответ, чтобы увидеть результат, затем переходи дальше.</p>
+  </main>
+</body>
+</html>
